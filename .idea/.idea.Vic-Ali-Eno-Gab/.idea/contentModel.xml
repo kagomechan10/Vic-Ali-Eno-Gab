@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Victor\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Victor\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Vic-Ali-Eno-Gab.-839438618.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Victor\Desktop\Vic-Ali-Eno-Gab" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Input" t="Include">
+          <e p="Inputs.cs" t="Include" />
+        </e>
+        <e p="Script" t="Include">
+          <e p="PlayerBehaviour.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Vic-Ali-Eno-Gab.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
