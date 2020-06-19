@@ -7,9 +7,11 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
+    [SerializeField] private float jumpForce;
     
     
     private Inputs inputs;
+    private Rigidbody2D myRB;
     private Vector2 direction;
     
     private void OnEnable()
@@ -18,7 +20,16 @@ public class PlayerBehaviour : MonoBehaviour
         inputs.Enable();
         inputs.Player.Move.performed += OnMovePerformed;
         inputs.Player.Move.canceled += OnMoveCanceled;
+        inputs.Player.Jump.performed += OnJumpperformed;
     }
+
+    private void OnJumpperformed(InputAction.CallbackContext obj)
+    {
+        myRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+    
+    
+    
     private void OnMoveCanceled(InputAction.CallbackContext obj)
     {
         direction = Vector2.zero;
@@ -28,9 +39,15 @@ public class PlayerBehaviour : MonoBehaviour
     {
         direction = obj.ReadValue<Vector2>();
     }
+
+    void Start()
+    {
+        myRB = GetComponent<Rigidbody2D>();
+    }
+    
     
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         var myRigidBody = GetComponent<Rigidbody2D>();
         direction.y = 0;
