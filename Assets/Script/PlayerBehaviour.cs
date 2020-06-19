@@ -39,6 +39,12 @@ public class PlayerBehaviour : MonoBehaviour
     {
         direction = obj.ReadValue<Vector2>();
     }
+
+    void Start()
+    {
+        myRB = GetComponent<Rigidbody2D>();
+    }
+    
     
     // Update is called once per frame
     private void FixedUpdate()
